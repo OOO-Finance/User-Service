@@ -1,0 +1,18 @@
+package ru.finance.userservice.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
+
+@Entity
+@Table
+@Getter
+@Setter
+public class User {
+
+    @Id
+    private Long telegramId;
+
+}

@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user?currentSchema=user
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    driver-class-name: ${spring.datasource.driver-class-name}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    url: ${spring.datasource.url}
+    default-schema: user
+    change-log: db/changelog/master-changelog.xml
+  cloud:
+    config:
+      enabled: false
